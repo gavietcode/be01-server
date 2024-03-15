@@ -36,6 +36,10 @@ mongoose.connection.on("connected", () => {
   console.log("MongoDB is disconnected!.");
 });
 
+app.get("/", (req, res) => {
+  res.send("Home Page API Booking");
+});
+
 // Middleware
 app.use("/api/auth", authRoute);
 app.use("/api/users", usersRoute);
